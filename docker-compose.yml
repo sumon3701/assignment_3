@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  assignment_3:
+    build: .
+    image: sumon3701/assignment_3:v1.0.0
+    container_name: assignment_3
+    expose:
+      - 5000
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    depends_on:
+      - assignment_3
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf

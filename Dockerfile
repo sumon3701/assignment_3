@@ -20,5 +20,5 @@ RUN npm install -g pm2
 EXPOSE 5000
 
 # Start the application using PM2
-CMD ["pm2-runtime", "start", "./src/server.js", "--name", "node-app"]
+CMD ["pm2-runtime", "start", "./src/server.js", "--name", "assignment_3"]
 
